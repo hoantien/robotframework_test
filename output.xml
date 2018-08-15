@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180815 06:18:40.133" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/tienluong/workspaces/robotframwork/test/test.rst" id="s1" name="Test">
+<test id="s1-t1" name="My Test">
+<kw name="phep cong" library="cal">
+<arguments>
+<arg>1</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${MESSAGE}</var>
+</assign>
+<msg timestamp="20180815 06:18:40.164" level="INFO">${MESSAGE} = 3</msg>
+<status status="PASS" endtime="20180815 06:18:40.164" starttime="20180815 06:18:40.163"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>${3}</arg>
+</arguments>
+<status status="PASS" endtime="20180815 06:18:40.178" starttime="20180815 06:18:40.164"></status>
+</kw>
+<status status="PASS" endtime="20180815 06:18:40.179" critical="yes" starttime="20180815 06:18:40.162"></status>
+</test>
+<test id="s1-t2" name="Another Test">
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180815 06:18:40.183" level="FAIL">2 != 3</msg>
+<status status="FAIL" endtime="20180815 06:18:40.183" starttime="20180815 06:18:40.181"></status>
+</kw>
+<status status="FAIL" endtime="20180815 06:18:40.184" critical="yes" starttime="20180815 06:18:40.180">2 != 3</status>
+</test>
+<status status="FAIL" endtime="20180815 06:18:40.186" starttime="20180815 06:18:40.135"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Test" pass="1">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
